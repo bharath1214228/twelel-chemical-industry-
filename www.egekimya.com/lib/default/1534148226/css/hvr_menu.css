@@ -1,0 +1,64 @@
+.btco-hover-menu {
+    padding: 0;
+}
+.btco-hover-menu .collapse ul ul li a{
+    padding: 8px 5px;
+    color: #fff;
+}
+
+.btco-hover-menu .active a,
+.btco-hover-menu .active a:focus,
+.btco-hover-menu .active a:hover,
+.btco-hover-menu li a:hover,
+.btco-hover-menu li a:focus ,
+.navbar>.show>a,
+.navbar>.show>a:focus,
+.navbar>.show>a:hover{
+    background: transparent;
+    outline: 0;
+}
+.btco-hover-menu .dropdown-menu .dropdown-item {
+    white-space: normal;
+}
+.dropdown-menu {
+    padding:0;
+    margin:0;
+    border:0;
+    border-radius: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/*first level*/
+
+.btco-hover-menu .collapse ul ul > li:hover > a, .navbar .show .dropdown-menu > li > a:focus, .navbar .show .dropdown-menu > li > a:hover{background-color:#fff;color:#09018b;-webkit-box-shadow: 0 0 6px 0px rgba(0,0,0,.1) inset;box-shadow: 0 0 6px 0px rgba(0,0,0,.1) inset;}
+/*second level*/
+.btco-hover-menu .collapse ul ul ul > li:hover > a{background: #fff;-webkit-box-shadow: 0 0 6px 0px rgba(0,0,0,.1) inset;box-shadow: 0 0 6px 0px rgba(0,0,0,.1) inset;}
+
+/*third level*/
+.btco-hover-menu .collapse ul ul, .btco-hover-menu .collapse ul ul.dropdown-menu{background:#00006D;}
+.btco-hover-menu .collapse ul ul ul, .btco-hover-menu .collapse ul ul ul.dropdown-menu{background:#00004F}
+.btco-hover-menu .collapse ul ul ul ul, .btco-hover-menu .collapse ul ul ul ul.dropdown-menu{background:#000031}
+
+
+@media only screen and (max-width: 991px) {
+    .btco-hover-menu .show > .dropdown-toggle::after{
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+@media only screen and (min-width: 991px) {
+
+    .btco-hover-menu .collapse ul li{position:relative;}
+    .btco-hover-menu .collapse ul li:hover> ul{display:block}
+    .btco-hover-menu .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+    /*******/
+    .btco-hover-menu .collapse ul ul li{position:relative}
+    .btco-hover-menu .collapse ul ul li:hover> ul{display:block}
+    .btco-hover-menu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+    /*******/
+    .btco-hover-menu .collapse ul ul ul li{position:relative}
+    .btco-hover-menu .collapse ul ul ul li:hover ul{display:block}
+    .btco-hover-menu .collapse ul ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none;z-index:1}
+}
